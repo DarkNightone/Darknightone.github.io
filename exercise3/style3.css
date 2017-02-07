@@ -1,0 +1,27 @@
+.wrap{
+	max-width: 1000px;
+	padding: 10px;
+	margin: 15px;
+}
+.main-content img{
+	width: 100px;
+	height: 150px;
+	border: 3px solid #2f7a00;
+	margin: 5px;
+	box-sizing: border-box;
+	float: left;
+	padding: 5px;
+}
+.banner{
+	padding-left: 50px;
+}
+.main-menu{
+	text-align: center;
+}
+.main-menu a{
+	text-decoration: none;
+	font-size: 20px;
+}
+.main-menu a:hover,.main-menu a:active{
+	color: black;
+}
