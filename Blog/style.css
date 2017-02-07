@@ -1,0 +1,7 @@
+.main.menu{
+	font-size: 30px;
+	color: red;
+}
+.active{
+	color: #ff0043;
+}
