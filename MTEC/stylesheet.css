@@ -1,0 +1,117 @@
+#wrap{
+	max-width: 1000px;
+	margin-left: 100px;
+	position: relative;
+}
+#bannercompany{
+	width: 1000px;
+	border: 5px inset yellowgreen;
+	box-sizing: border-box;
+	margin-top: auto;
+}
+#bannercompany img{
+	width: 900px;
+	height: 200px;
+	padding-left: 10;
+	padding-left: 50px;
+}
+#home img{
+	width: 30px;
+	height: 30px;
+}
+#menu{
+	text-align: center;
+	margin-top: 13px;
+	border: 3px #6597ed outset;
+	box-sizing: border-box;
+	height: 37px;
+	background: #e9f2ba;
+}
+
+#menu a{
+	text-decoration: none;
+	font-size: 20px;
+}
+#menu span{
+	color: #f29c80;
+}
+#home{
+	margin: 50px;	
+	display: inline-block;
+	float: left;
+	margin-top:0px; 
+
+}
+#reference{
+	margin: 50px;	
+	display: inline-block;
+	margin-top:3px;
+}
+#contact{
+	margin: 50px;
+	display: inline-block;
+	float: right;
+	margin-top:3px;
+
+}
+#logo img{
+	border-radius: 50%;
+	margin-top: 30px;
+}
+#logo{
+	position: absolute;
+	top: 65px;
+    left: 60px;
+}
+
+#set1{
+	display: inline-block;
+}
+
+#set2 span{
+	font-size: 30px;
+	color: #e89b7d;
+	padding-top: 10px;	
+}
+#set2{
+	max-width: 1000px;
+
+}
+.text{
+	text-align: center;
+	margin-bottom: 10px;
+}
+.imageproduct{
+	max-width: 1000px;
+	padding-left: 10px;
+
+}
+.thumb{
+	margin: 5px;
+	float: left;
+}
+.imageproduct  img{
+	width: 300px;
+	border:5px inset #ede978;
+	opacity: 1;
+	margin:5px;
+	margin-bottom: 0;
+	transition: opacity 2s cubic-bezier(0.4, 0, 1, 1);
+}
+.thumb:hover img{
+	opacity: 0.8;
+}
+.clearfix{
+	clear: both;
+	border: 1px solid #111111;
+}
+#scroll{
+	position: fixed;
+	/* width: 10px; */
+	bottom: 0px;
+	right: 0px;
+}
+#scroll img{
+	width: 25px;
+	height: 25px;
+}
