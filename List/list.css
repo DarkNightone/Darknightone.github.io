@@ -12,30 +12,14 @@ body{
 #food>.dish img{
 	transition: all 1s linear;
 	overflow: hidden;
-	-webkit-animation:4s linear 0s infinite alteration runbanner;
-	-o-animation:4s linear 0s infinite alteration runbanner;
-	-moz-animation:4s linear 0s infinite alteration runbanner;
-	animation:4s linear 0s infinite alteration runbanner;
-
 }
 #food>.dish img:hover{
 	transform: scale(1.2);
 }
-@keyframes runbanner{
-	from{margin-left: -20%;}
-	to{margin-left: 100%;}
-}
-@-webkit-keyframes runbanner{
-	from{margin-left: -20%;}
-	to{margin-left: 100%;}
-}
-@-moz-keyframes runbanner{
-	from{margin-left: -20%;}
-	to{margin-left: 100%;}
-}
-@-o-keyframes{
-	from{margin-left: -20%;}
-	to{margin-left: 100%;}
+@-webkit-keyframes move_eye { from { margin-left:-20%; } to { margin-right:-20%; }  }
+   @-moz-keyframes move_eye { from { margin-left:-20%; } to { margin-left:100%; }  }
+     @-o-keyframes move_eye { from { margin-left:-20%; } to { margin-left:100%; }  }
+        @keyframes move_eye { from { margin-left:-20%; } to { margin-left: 100%;}  }
 }
 #menu{
 	display: inline-block;
@@ -110,7 +94,14 @@ body{
 	border: 1px solid black;
 }
 #foot {
-	text-align:center;
+
+
+}
+#foot p{
+  -webkit-animation: 4s linear 0s infinite linear move_eye;
+     -moz-animation: 4s linear 0s infinite alternate move_eye;
+       -o-animation: 4s linear 0s infinite alternate move_eye;
+          animation: 4s linear 0s infinite alternate move_eye;
 	position: relative;
 }
 #button-up{
