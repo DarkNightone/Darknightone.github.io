@@ -1,0 +1,115 @@
+body{
+}
+#wrap{
+	max-width: 1000px;
+	margin-left: 100px;
+}
+#banner img{
+	width:1000px;
+	height: auto;
+	margin: auto;
+}
+#food>.dish img{
+	transition: all 1s linear;
+	overflow: hidden;
+}
+#food>.dish img:hover{
+	transform: scale(1.2);
+}
+@-webkit-keyframes move_eye { from { margin-left:-20%; } to { margin-right:-20%; }  }
+   @-moz-keyframes move_eye { from { margin-left:-20%; } to { margin-left:100%; }  }
+     @-o-keyframes move_eye { from { margin-left:-20%; } to { margin-left:100%; }  }
+        @keyframes move_eye { from { margin-left:-20%; } to { margin-left: 100%;}  }
+}
+#menu{
+	display: inline-block;
+	width: 1000px;
+	border: 3px solid red;
+	box-sizing: border-box;
+}
+#menu a{
+	text-decoration: none;
+}
+#hidden li {
+	float: left;
+	width: 300px;
+	list-style-type: none;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+#hidden li ul {
+	display: none;
+	padding-top: 15px;
+	padding-left: 15px;
+	position: absolute;
+	max-width: 200px;
+}
+#hidden li ul a{
+	color: #09090c;
+	background-color: #c4bb6d;
+}
+#hidden>li:hover  ul{
+	display: block;
+}
+#food {
+	max-width: 1000px;
+	max-height: auto;
+	/* margin: 15px; */
+	/* padding-left: 50px; */
+	margin-left: 20px; 
+	/* padding-top: 20px; */
+	box-sizing: border-box;
+	/* margin-left: 50px; */
+	float: right;
+}
+
+#food>.dish {
+	margin: 10px;
+	float: left;
+	/* padding-left: 20px; */
+	text-align: center;
+	max-width: 280px;
+	height: 500px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+}
+#food>.dish img{
+	float: left;
+	margin: 30px; 
+	width: 280px;
+	height: 325px;
+
+}
+#food>.dish span{
+	font-size: 2em;
+	color: #489134;
+}
+.price span::after{
+	content: "VND";
+}
+.break{
+	clear:both;
+	width: 1000px;
+	border: 1px solid black;
+}
+#foot {
+
+
+}
+#foot p{
+  -webkit-animation: 4s linear 0s infinite linear move_eye;
+     -moz-animation: 4s linear 0s infinite alternate move_eye;
+       -o-animation: 4s linear 0s infinite alternate move_eye;
+          animation: 4s linear 0s infinite alternate move_eye;
+	position: relative;
+}
+#button-up{
+	position: fixed;
+	bottom : 0px;
+	right: 0px;
+}
+#button-up img{
+	width: 25px;
+	height: 25px;
+}
