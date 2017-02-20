@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quiz</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="quiz">
+		<div id="header">
+			<p> Question 1 : What sport does Roger Federer ? </p>
+		</div>
+
+		<div class="clear"></div>
+		
+		<div id="body">
+			<table width="200" border="1">
+				<tr>
+					<td><input type="radio" name="radio" value="a1" id='a1'>Soccer</td>
+					<td><input type="radio" name="radio" value="a1" id='a2'>VolleBall</td>
+				</tr>
+
+				<tr>
+					<td><input type="radio" name="radio" value="a1" id='a3'>Cricket</td>
+					<td><input type="radio" name="radio" value="a1" id='a4'>Tennis</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="clear"></div>
+
+		<div id="footer">
+			<p><input type="submit" name="" onclick="fSubmit()"></p>
+		</div>
+	</div>
+	<script type="text/javascript">
+
+		var score=0;
+		function fSubmit(){
+			var correctanswer=document.getElementById("a4");
+			if(correctanswer.checked==true){				
+				score+=1;
+				alert("Correct.Your score is now "+ score);
+			}
+
+			else alert("Incorrect.Your score is now "+score);
+		}
+	</script>
+</body>
+</html>

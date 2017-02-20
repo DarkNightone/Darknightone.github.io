@@ -1,0 +1,33 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font:bold 14px Arial,sans-serif;
+}
+html{
+	height: 100%;
+	background: #ccc;
+	background-size: cover
+}
+#quiz{
+	max-width: 100%;
+	height: auto;
+	border-radius: 5px;
+	background: #2bc459; 
+}
+#header p{
+	font-size: 30px;
+	color: #e2df28;
+	word-spacing: 4px;
+	margin: 15px;
+}
+#body{
+	max-width: 40%;
+	background: linear-gradient(#8928e2,#28c7e2);
+	height: auto;
+
+	margin: 40px;
+}
+#body tr td{
+	font-size: 60px;
+}

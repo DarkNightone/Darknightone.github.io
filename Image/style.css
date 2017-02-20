@@ -1,0 +1,9 @@
+a:link{
+	color: black;
+}
+a:hover{
+	color:green;
+}
+b.money::after {
+	content: "VND";
+}

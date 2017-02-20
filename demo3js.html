@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo</title>
+	<meta charset="utf-8"/>
+</head>
+<body>
+	<script type="text/javascript">
+		function bai1(){
+			var i=1;
+			var j=2;
+			if(i,j>0){
+				if(i>j){
+					document.write("<p>"+i+"</p>");
+				}
+				else document.write("<p>"+j+"</p>");
+			}
+		}
+		function bai2(a){
+			if(a>0){
+				for(var i=a-1;i>=1;i--){
+					a*=i;
+				}
+			}
+			//document.write("<p>"+a+"</p>")		;
+			return a;
+		}
+		function bai3(){
+			var user={
+				username:"",
+				password:"",
+				confirm:"",
+			};
+			var user1=[];
+			user1.push(2);
+			user1.push("ok");
+			user.username=user1;
+			if(user.username!=null&&user.username.length<20){
+				alert("Good");
+			}
+		}
+		function bai4(){
+			var now=new Date();
+			var day=now.getDate();
+			var month=now.getMonth()+1;
+			var year=now.getFullYear();
+			var hour=now.getHours();
+			var minites=now.getMinutes();
+			var seconds=now.getSeconds();
+		}
+		function bai5(){
+			var string=[10,2,4,5];
+			if(typeof string=="object"){
+				var convert=string.toString();
+			}
+			if(convert.length<10){
+				document.write("<p>"+convert+"</p>");
+			}
+			else{
+				var string2=[];
+				var string3=convert.split("");
+				for(var i=0;i<10;i++){
+					string2[i]=string3[i];
+				}
+				document.write("<p>"+string2+(".....")+"</p>");
+			}
+		}
+		function bai6(a){
+			if(0<=a<=3,9){
+				document.write("F");
+			}
+		}
+	</script>
+</body>
+</html>

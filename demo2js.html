@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo 2</title>
+	<meta charset="utf-8"/>
+</head>
+<body>
+	<p id="demo"></p>
+	<p id="demo2"></p>
+	<p id="demo3"></p>
+	<p id="demo4"></p>
+	<p id="demo5"></p>
+	<p id="demo6"></p>
+	<p id="demo7"></p>
+	<p id="demo8"></p>
+	<p id="demo9"></p>
+	<p id="demo10"></p>
+
+	<script type="text/javascript">
+		function total(a,b){
+			return a+b;
+		}
+		function Times(a,b){
+			return a*b;
+		}
+		function Equals(a,b,c){
+			var q=(3*a+2*b-c)
+			return q ;
+		}
+		function String(){
+			var string="afsdhfhsdkfhskdhfksdhfksdhfkhdskhfksdhfkhskjdfhdskfhsdkjfhsdkj";
+			document.getElementById("demo2").innerHTML=string;
+		}
+		function st(){
+			var string="Hellomjfjfkejkfskfjksjfkffkjfdjewori";
+			var char=string.split("");//var char=[];
+			var index=string.length;
+			if(index>10){
+				document.write("<p>OK.Fine!</p>");
+			}
+			var text="";
+			var i;
+			for( i=0;i<10;i++){
+				text+=char[i] ;
+			}
+			//var join1=text.join("....");
+			document.getElementById("demo3").innerHTML=text+("....");
+		}
+		var arr=[1,2,3,4];
+		document.getElementById("demo4").innerHTML=arr.join("aaa");
+		var ojc={name:"Hoan",age:"25"};
+		document.getElementById("demo5").innerHTML=ojc.name;
+		st();
+		String();
+		var b=Equals(1,1,5);
+		var ab=total(2,3)+"<br>"+Times(2,4)+"<br>"+b;
+		document.getElementById("demo").innerHTML=ab;
+		function upppercase(){
+			var string="viet nam";
+			var st=string[0].toUpperCase();
+			var str=string.slice(1,8);
+			document.getElementById("demo6").innerHTML=st + str ;
+		}
+		upppercase();
+		var number=[3,2,3,4,5];
+		var sort=number.sort();
+		var math=number[3];
+		var sqrt=Math.sqrt(math);
+		document.getElementById("demo7").innerHTML=sqrt;
+		var teacher={
+			name:"Kim Dung",
+			age:"30",
+			say: function(){}
+		};
+		var aboutme = function(){
+			var string=this.name + "<br>" +this.age ;
+			document.getElementById("demo8").innerHTML=string;
+		}
+		teacher.say=aboutme;
+		teacher.say();
+		var stuedent={
+			first_name:"Hoan",
+			last_name:"Dao",
+			age:"22",
+			say: function(){}
+		};
+		var aboutstuedent=function(){
+			document.getElementById("demo10").innerHTML=this.last_name;
+		}
+		stuedent.say=aboutstuedent;
+		stuedent.say();
+		var count=5;
+		var index=1;
+		for(var i=1;i<=count;i++){
+			index*=i;
+		}
+		document.write("<p>"+index+"</p>");
+		var backstring="hoanz";
+		var assignment=backstring.split("");
+		for(var i=0;i<backstring.length/2;i++){
+			var temp=assignment[i];
+			assignment[i]=assignment[(backstring.length)-(i+1)];
+			assignment[(backstring.length)-(i+1)]=temp;
+		}
+		document.write("<p>"+assignment+"</p>");
+		var duplicate="123";
+		for(var i=0;i<10;i++){
+			if(i==9){
+				document.write(duplicate);
+			}
+			else
+				document.write(duplicate+" - ");
+		}
+		var summary={
+			first_name:"Hoan",
+			last_name:"Dao",
+			age:"22",
+		};
+		for(var s in summary){
+			document.write("<p>"+summary[s]+"</p>");
+		}
+		var nameStudent=["Hoan","Son","Thu","Mai","Trang"];
+		function sortName(){
+			var College=nameStudent.sort();
+			for(var i=0;i<College.length;i++){
+				document.write("<p>"+(i+1)+". "+College[i]+"</p>");
+			}
+		}
+		sortName();
+		var arrayNumber=[1,2,3,4,5];
+		function double(){
+			for(var i=0;i<arrayNumber.length;i++){
+				arrayNumber[i]*=2;
+			}
+			document.write("<p>"+arrayNumber+"</p>");
+		}
+		double();
+		var mins=[1,2,3,4,5,6,7,8,9,10];
+		var temp=[];
+		function minss(){
+			for(var i=0;i<mins.length;i++){
+				temp[i]=(mins[i]%2);
+			}
+			document.write("<p>"+temp+"</p>");
+		}
+		minss();
+	</script>
+</body>
+</html>
