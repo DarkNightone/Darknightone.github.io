@@ -92,6 +92,7 @@
 }
 .imageproduct  img{
 	width: 300px;
+	height:auto;
 	border:5px inset #ede978;
 	opacity: 1;
 	margin:5px;
