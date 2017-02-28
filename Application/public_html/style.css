@@ -1,0 +1,215 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-color: #edf0f1;
+    padding: 80px 0 0 0;
+}
+header{
+    width:100%;
+    height:80px; 
+    position:fixed;
+    padding:15px;
+    top:0;
+    left:0;
+    z-index: 5;
+    background:#25b99a;
+    border-bottom-right-radius:10px; 
+    border-bottom-left-radius:10px;
+    box-shadow:0px 2px 4px rgba(44,62,80,0.15);
+}
+header input{
+    width:100%;
+    height:50px;
+    float:left;
+    color:#fff;
+    font-weight:400;
+    font-size:15px;
+    padding:0 60px 0 10px ;
+    text-indent: 20px;
+    background:rgba(255,255,255,0.2);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius:25px;
+    border-bottom-right-radius:25px;
+    outline:none;
+    border:0px;
+    box-shadow:none;
+    
+    -o-appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    appearance:none;
+    
+}
+header input::-webkit-input-placeholder{
+    color:rgba(255,255,255,0.75);
+}
+header input::input-placeholder{
+    color:rgba(255,255,255,0.75);
+}
+header input::-moz-input-placeholder{
+    color:rgba(255,255,255,0.75);
+}
+header input::-o-input-placeholder{
+    color:rgba(255,255,255,0.75);
+}
+header button{
+    width:50px;
+    height:50px;
+    position: absolute;
+    top:15px;
+    right:15px;
+    z-index: 2;
+    outline:none;
+    border-radius: 25px;
+    border:none;
+    background:#fff;
+    box-shadow: none;
+    cursor:pointer;
+}
+header button svg{
+    width:16px;
+    height:16px;
+    top:50%;
+    left: 50%;
+
+}
+header button svg .fill{
+    fill:#25b99a;
+}
+
+.container{
+    width:100%;
+    float:left;
+    padding:15px;
+}
+
+ul.todo{
+    width:100%;
+    float:left;
+    list-style-type:none;
+    height:50px;
+
+}
+ul.todo li{
+    width:100%;
+    float:left;
+    min-height:50px;
+    font-size:14px;
+    font-weight:500;
+    color:#444;
+    line-height:22px;
+    position: relative;
+    padding:14px 100px 14px 14px;
+    background:#fff;
+    border-radius:5px;
+    box-shadow: 0px 2px 4px rgba(44,62,80,.1);
+    margin:0 0 10px;
+}
+ul.todo li:last-of-type{
+    margin:0;
+}
+ul.todo li .buttons{
+    width:100px;
+    height:50px;
+    position: absolute;
+    top: 0;
+    right:0;
+}
+ul.todo li .buttons button{
+    width:50px;
+    height:50px;
+    float:left;
+    cursor:pointer;
+    background:none;
+    border:0;
+    box-shadow: none;
+    outline:none;
+    position:relative;x
+    -o-appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    appearance:none;
+    
+}
+ul.todo li .buttons button:last-of-type::before{
+    content:'';
+    width:1px;
+    height:30px;
+    position:absolute;
+    top:10px;
+    left:0;
+    background:#edf0f1;
+}
+
+ul.todo li .buttons button svg{
+    width:22px;
+    height:22px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin:-11px 0 0 -11px;
+    transition:0.2s ease;
+
+
+}
+ul.todo#completed li .buttons button.complete svg{
+    background:#25b99a;
+    border: 0;
+}
+ul.todo#completed li .buttons button.complete svg .fill{
+    fill:#fff;
+}
+ul.todo:not(#completed) li .buttons button.complete:hover svg{
+    background: rgba(43,185,154,0.75);
+}
+ul.todo:not(#completed) li .buttons button.complete:hover svg .fill{
+    fill:#fff;
+}
+ul.todo li .buttons button svg.fill{
+    -o-transition:fill 0.2s ease;
+    -moz-transition:fill 0.2s ease;
+    -webkit-transition:fill 0.2s ease;
+    -ms-transition:fill 0.2s ease;
+    transition:fill 0.2s ease;
+}
+ul.todo li .buttons button.complete svg{
+    border-radius:11px;
+    border:1.5px solid #25b99a;
+
+    -o-transition:fill 0.2s ease;
+    -moz-transition:fill 0.2s ease;
+    -webkit-transition:fill 0.2s ease;
+    -ms-transition:fill 0.2s ease;
+    transition:fill 0.2s ease;
+}
+
+ul.todo li .buttons button.remove svg .fill{
+    fill:#c0cecb;
+}
+ul.todo li .buttons button.complete svg .fill{
+    fill:#25b99a;
+}
+ul.todo li .buttons button.remove:hover svg .fill{
+    fill:#e85656;
+}
+
+ul.todo#completed:not(empty){
+    position: relative;
+    padding:60px 0 0 0;
+
+}
+ul.todo#completed:not(empty)::before{
+    content:'';
+    height: 1px;
+    width: 150px;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    background: #d8e5e0;
+    margin: 0 0 0 -75px;
+}
