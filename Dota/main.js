@@ -1,6 +1,6 @@
 
 
-var cards=["0",'1','2','3','4','5','6',"0",'1','2','3','4','5','6'];
+var cards=["0",'1','2','3','4','5','6'];
 
 var current=null;
 
@@ -30,24 +30,30 @@ function shuffle(array){
 
 function flip(card){
 	$(card).toggleClass('flipped');
-
-	if(!current)
+		$(card).click(function(){
+			$(this)=null;
+	});
+	if(current==null){
 		current=$(card);
+	}	
+
+
 	else{
 		if(current.attr("dataname")!=$(card).attr("dataname")){
-
+			setTimeout(function(){
 				current.toggleClass("flipped");
 				$(card).toggleClass("flipped");
+				current=null;
+			},500);
 
-			
 		}
 		else{
 			setTimeout(function(){
-			$(card).css('opacity','0');
-			current.css('opacity','0');
-			current=null;
-			count++;
-			if(count==8)alert("You Are Win!!!");
+				$(card).css('opacity','0');
+				current.css('opacity','0');
+				current=null;
+				count++;
+				if(count==8)alert("You Are Win!!!");
 			},200);
 
 		}
@@ -56,19 +62,19 @@ function flip(card){
 
 $(function(){
 	cards=shuffle(cards);
-
+	cards=cards.concat(cards);
 	var html='';
 
 	for(var i=0;i<cards.length;i++){
-		html+=
-		'<div class="box_1" dataname='+ cards[i] + ' onclick="flip(this);">'+
+		html+='<div class="grid">'+
+		'<div class="card" dataname= "'+cards[i]+'"onclick="flip(this)">'+
+		'<div class="front"><img src="images/mat-sau.jpg"/></div>'+
+		'<div class="back" ><img src="images/mat-truoc' + cards[i] +'.jpg"/></div>' +
 
-		'<div class="front-image"><img src="images/mat-truoc' + cards[i] +'.jpg"/></div>' +
-		'<div class="back-image"><img src="images/mat-sau.jpg"/></div>'+
-		'</div>';
+		'</div></div>';
+
 	};
 	$('.container').html(html);
-
 	var run=setInterval(function(){
 		runtimeout--;
 		$('.time').html(runtimeout);
