@@ -61,7 +61,7 @@ $(function(){
 
 	for(var i=0;i<cards.length;i++){
 		html+=
-		'<div class="box_1" dataname='+ cards[i] + ' click="flip(this);this.onclick=null;">'+
+		'<div class="box_1" dataname='+ cards[i] + ' onclick="flip(this);">'+
 
 		'<div class="front-image"><img src="images/mat-truoc' + cards[i] +'.jpg"/></div>' +
 		'<div class="back-image"><img src="images/mat-sau.jpg"/></div>'+
