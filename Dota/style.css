@@ -32,7 +32,7 @@ html{
 
 	max-width:1050px;
 	margin: 40px;
-	
+	float:left;
 }
 
 .container .box_1 img{
@@ -43,7 +43,7 @@ html{
 }
 
 .container .box_1{
-	max-width:300px;
+	width:200px;
 	height: auto;
 	margin:	10px;	
 	float:left;
@@ -59,13 +59,19 @@ html{
 	transform:rotateY(180deg);
 	backface-visibility: hidden;	
 	transition:all 0.5s ease;
-	opacity: 1;
 }
 .box_1 > .back-image{
 	transform: rotateY(0deg);
 	backface-visibility: hidden;
 	transition:all 0.5s ease;
-	opacity: 1;
 }
-
+.box_1 > .back-image:active{
+	transform:rotateY(180deg);
+	backface-visibility:hidden;
+	transition:all .5s ease;
+}
+.box_1 > .front-image:active{
+	transform:rotateY(0deg);
+	transition:all .5s ease;
+}
 
