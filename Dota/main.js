@@ -31,8 +31,8 @@ function shuffle(array){
 function flip(card){
 	$(card).toggleClass('flipped');
 	if(current==null){
-		current=$(card);
-		$(current).one("click off");
+	current=$(card);
+	$(current).one("click mouseover");
 
 	}	
 
