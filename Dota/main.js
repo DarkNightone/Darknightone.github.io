@@ -31,6 +31,7 @@ function shuffle(array){
 
 function flip(card){
 	$(card).toggleClass('flipped');
+	$(this).off("click");
 		$(card).click(function(){
 			$(this)=null;
 	});
