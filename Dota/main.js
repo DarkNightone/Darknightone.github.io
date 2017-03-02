@@ -1,4 +1,4 @@
-@@ -1,186 +0,0 @@
+
 
 
 var cards=["0",'1','2','3','4','5','6'];
@@ -30,18 +30,15 @@ function shuffle(array){
 }
 
 function flip(card){
-<<<<<<< HEAD
 	$(card).toggleClass('flipped');
 		$(card).click(function(){
 			$(this)=null;
 	});
 	if(current==null){
-=======
 	//$(this).toggleClass('flipped');
 
  $(card).toggleClass('flipped');
 	if(!current)
->>>>>>> origin/master
 		current=$(card);
 	}	
 
@@ -49,13 +46,10 @@ function flip(card){
 	else{
 		if(current.attr("dataname")!=$(card).attr("dataname")){
 			setTimeout(function(){
-<<<<<<< HEAD
 				current.toggleClass("flipped");
 				$(card).toggleClass("flipped");
-=======
 				current.toggleClass('flipped');
 				$(card).toggleClass('flipped');
->>>>>>> origin/master
 				current=null;
 			},500);
 
@@ -75,7 +69,6 @@ function flip(card){
 
 $(function(){
 	cards=shuffle(cards);
-<<<<<<< HEAD
 	cards=cards.concat(cards);
 	var html='';
 
@@ -89,7 +82,6 @@ $(function(){
 
 	};
 	$('.container').html(html);
-=======
 
 	var html=document.getElementsByClassName('container');
 
@@ -124,7 +116,6 @@ $(function(){
 		// html.appendChlid(grid);
 	};
 
->>>>>>> origin/master
 	var run=setInterval(function(){
 		runtimeout--;
 		$('.time').html(runtimeout);
