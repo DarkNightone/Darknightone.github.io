@@ -1,3 +1,4 @@
+@@ -1,186 +0,0 @@
 
 
 var cards=["0",'1','2','3','4','5','6'];
@@ -12,8 +13,8 @@ function shuffle(array){
 
 	var currentIndex=array.length,temporaryValue,randomIndex;
 
-	
-	
+
+
 	while(currentIndex!==0){
 		randomIndex=Math.floor(Math.random() * currentIndex);
 
@@ -29,11 +30,18 @@ function shuffle(array){
 }
 
 function flip(card){
+<<<<<<< HEAD
 	$(card).toggleClass('flipped');
 		$(card).click(function(){
 			$(this)=null;
 	});
 	if(current==null){
+=======
+	//$(this).toggleClass('flipped');
+
+ $(card).toggleClass('flipped');
+	if(!current)
+>>>>>>> origin/master
 		current=$(card);
 	}	
 
@@ -41,8 +49,13 @@ function flip(card){
 	else{
 		if(current.attr("dataname")!=$(card).attr("dataname")){
 			setTimeout(function(){
+<<<<<<< HEAD
 				current.toggleClass("flipped");
 				$(card).toggleClass("flipped");
+=======
+				current.toggleClass('flipped');
+				$(card).toggleClass('flipped');
+>>>>>>> origin/master
 				current=null;
 			},500);
 
@@ -62,6 +75,7 @@ function flip(card){
 
 $(function(){
 	cards=shuffle(cards);
+<<<<<<< HEAD
 	cards=cards.concat(cards);
 	var html='';
 
@@ -75,6 +89,42 @@ $(function(){
 
 	};
 	$('.container').html(html);
+=======
+
+	var html=document.getElementsByClassName('container');
+
+	for(var i=0;i<cards.length;i++){
+		html+='<div class="grid">'+
+		'<div class="box_1" dataname='+ cards[i] + ' onclick="flip(this)">'+
+
+
+		'<div class="front-image"><img src="images/mat-truoc' + cards[i] +'.jpg"/></div>' +
+		'<div class="back-image"><img src="images/mat-sau.jpg"/></div>'+
+		'</div></div>';
+
+		// var grid=document.createElement("div");
+		// grid.classList.add("grid");
+		// var card=document.createElement("div");
+		// card.classList.add("box_1");
+		// card.setAttribute("dataname",cards[i]);
+		// card.addEventListener("click",flip);
+		// var front=document.createElement("div");
+		// front.classList.add("back-image");
+		// var img=document.createElement("img");
+		// img.src="images/mat-truoc\' + cards[i] +\'.jpg";
+		// front.innerHTML=img;
+		// var back=document.createElement("div");
+		// front.classList.add("front-image");
+		// var img=document.createElement("img");
+		// img.src="images/mat-sau.jpg";
+		// back.innerHTML=img;
+		// card.appendChlid(front);
+		// card.appendChlid(back);
+		// grid.appendChlid(card);
+		// html.appendChlid(grid);
+	};
+
+>>>>>>> origin/master
 	var run=setInterval(function(){
 		runtimeout--;
 		$('.time').html(runtimeout);
@@ -83,4 +133,5 @@ $(function(){
 			alert("You Are Lose!!!");
 		}
 	},1000);
+	$('.container').html(html);
 });
