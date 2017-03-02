@@ -32,7 +32,7 @@ function flip(card){
 	$(card).toggleClass('flipped');
 	if(current==null){
 		current=$(card);
-		$(current).off("click");
+		$(current).one("click off");
 
 	}	
 
