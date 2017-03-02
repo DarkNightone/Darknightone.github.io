@@ -30,7 +30,7 @@ function shuffle(array){
 
 function flip(card){
 	$(card).toggleClass('flipped');
-		$(card).off("click");
+		$(card).click("off");
 	if(current==null){
 		current=$(card);
 	}	
