@@ -31,10 +31,11 @@ function shuffle(array){
 
 function flip(card){
 	$(card).toggleClass('flipped');
+	$(card).removeAttr("onclick");
 
-	$(this).off("click");
 	if(!current){
 		current=$(card);
+
 	}
 	
 
@@ -44,7 +45,10 @@ function flip(card){
 		setTimeout(function(){
 			current.toggleClass("flipped");
 			$(card).toggleClass("flipped");
+			 current.attr('onclick','flip(this)');
+			 $(card).attr('onclick','flip(this)');
 			current=null;
+
 		},500);
 
 	}
@@ -54,8 +58,8 @@ function flip(card){
 			current.css('opacity','0');
 			current=null;
 			count++;
-			if(count==8)alert("You Are Win!!!");
-		},200);
+			if(count==7)alert("You Are Win!!!");
+		},500);
 
 	}
 	

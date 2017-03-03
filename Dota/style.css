@@ -48,14 +48,18 @@ html{
 {
 	-webkit-backface-visibility:hidden;
 	-moz-backface-visibility:hidden;
+	-o-backface-visibility:hidden;
 	backface-visibility:hidden;
-	-webkit-transition:all .4s;
-	-moz-transition:all .4s;
-	transition:all .4s;
+
+	-webkit-transition:all .4s ease;
+	-moz-transition:all .4s ease;
+	-o-transition:all .4s ease;
+	transition:all .4s ease;
 }
 .card .back{
 	-webkit-transform:rotateY(180deg);
 	-moz-transform:rotateY(180deg);
+	-o-transform:rotateY(180deg);
 	transform:rotateY(180deg);
 	position:absolute;
 	top:0;
@@ -64,11 +68,13 @@ html{
 .card.flipped .front{
 	-webkit-transform:rotateY(180deg);
 	-moz-transform:rotateY(180deg);
+	-o-transform:rotateY(180deg);
 	transform:rotateY(180deg);
 }
 .card.flipped .back{
 	-webkit-transform:rotateY(0);
 	-moz-transform:rotateY(0);
+	-o-transform:rotateY(0);
 	transform:rotateY(0);
 }
 .card img:hover,.flipped img{
@@ -76,3 +82,4 @@ html{
 	-moz-box-shadow:0 0 15px 5px rgba(200,240,240,.75);
 	box-shadow:0 0 15px 5px rgba(200,240,240,.75)
 }
+
