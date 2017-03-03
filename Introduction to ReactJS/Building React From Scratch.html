@@ -30,39 +30,62 @@
     </style>
   </head>
   <body>
-      <div class="broad">
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
+      <div class="render-target">
+
       </div>
 
-
       <script>
+        var gameState={
+            PLAYER_one_SYMBOL:'X',
+            PLAYER_Two_SYMBOL:'O',
+            currentTurn:'X',
+            broad:[
+                "","","","","","","","",""
+            ]
 
-          var PLAYER_One_SYMBOL='X'
-          var PLAYER_Two_SYMBOL='O'
-          var currentTurn=PLAYER_One_SYMBOL;
+        }
+        var render=function(state){
+            
+            document.querySelector('.render-target').innerHTML= "<div class='broad'>"+
+              "<div class='square' data-square-id='0'>"+state.broad[0]+"</div>"+
+              "<div class='square' data-square-id='1'>"+state.broad[1]+"</div>"+
+              "<div class='square' data-square-id='2'>"+state.broad[2]+"</div>"+
+              "<div class='square' data-square-id='3'>"+state.broad[3]+"</div>"+
+              "<div class='square' data-square-id='4'>"+state.broad[4]+"</div>"+
+              "<div class='square' data-square-id='3'>"+state.broad[5]+"</div>"+
+              "<div class='square' data-square-id='6'>"+state.broad[6]+"</div>"+
+              "<div class='square' data-square-id='7'>"+state.broad[7]+"</div>"+
+              "<div class='square' data-square-id='8'>"+state.broad[8]+"</div>"+
+              "</div>"
+              return
+        }
+          render(gameState)
+
           var broad=document.querySelector('.broad')
 
           broad.addEventListener('click',function(e){
-            e.target.innerHTML=currentTurn;
-            currentTurn=currentTurn===PLAYER_One_SYMBOL ? PLAYER_Two_SYMBOL : PLAYER_One_SYMBOL
+
+            var squareIndex=parseInt(e.target.dataset['squareId'],10)
+
+            gameState.broad[squareIndex]=gameState.currentTurn
+
+            gameState.currentTurn=gameState.currentTurn===gameState.PLAYER_One_SYMBOL ? gameState.PLAYER_Two_SYMBOL : gameState.PLAYER_One_SYMBOL
+              debugger
             if(checkForWinner()){
               alert("You Won!!")
             }
+            render(gameState)
+          
           })
 
+
+
+
           function checkForWinner(){
-            var squares=Array.prototype.slice.call(document.querySelectorAll('.square'),0);
+            var squares=gameState.broad;
 
             var symbols=squares.map(function(square){
-              return square.innerHTML;
+              return gameState.broad.innerHTML;
             })
             var winningCombos=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
 
