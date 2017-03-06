@@ -37,7 +37,7 @@ function flip(card){
 		current=$(card);
 
 	}
-	
+
 
 
 	else{
@@ -58,11 +58,11 @@ function flip(card){
 			current.css('opacity','0');
 			current=null;
 			count++;
-			if(count==7)alert("You Are Win!!!");
+			if(count==1)alert("You Are Win!!!");
 		},500);
 
 	}
-	
+
 	}
 }
 

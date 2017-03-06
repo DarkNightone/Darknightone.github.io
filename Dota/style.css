@@ -5,17 +5,18 @@
 	font-family: 'Roboto',sans-serif;
 }
 html{
-	background: url("images/ales-krivec-43430.jpg")  no-repeat center fixed;
+	background: url("images/dota.jpg")  no-repeat center fixed;
 	-webkit-background:cover;
 	-moz-background:cover;
 	-o-background:cover;
-	background-size:cover;	
+	background-size:cover;
 }
 .time{
+	margin-top: 20px;
 	width: 100%;
 	float: left;
 	color: black;
-	box-shadow : 0px 4px 4px rgba(255,255,255,0.5); 
+	box-shadow : 0px 4px 4px rgba(255,255,255,0.5);
 	font-size: 60px;
 	text-align: center;
 	margin-bottom: 30px;
@@ -30,12 +31,12 @@ html{
 
 }
 .card img{
-	width:200px;
-	height: 150px;		
+	width:300px;
+	height: 250px;
 }
 
 .card{
-	max-width:300px;
+	max-width: 300px;
 	height: auto;
 	margin: 20px;
 	float:left;
@@ -43,7 +44,7 @@ html{
 	position: relative;
 
 
-}	
+}
 .card .back,.card .front
 {
 	-webkit-backface-visibility:hidden;
@@ -82,4 +83,3 @@ html{
 	-moz-box-shadow:0 0 15px 5px rgba(200,240,240,.75);
 	box-shadow:0 0 15px 5px rgba(200,240,240,.75)
 }
-
