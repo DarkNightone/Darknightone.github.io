@@ -153,27 +153,27 @@ ul.todo li .buttons button:last-of-type::before {
     background: #edf0f1;
 }
 
-ul.todo#complete li .buttons button.complete svg{
-	background-color:#25b99a;
+ul.todo#completed li .buttons button.complete svg{
+	background-color:#25b99a;	
 	border:none;
 }
-ul.todo#complete li .buttons button.remove svg .fill{
+ul.todo#completed li .buttons button.complete svg .fill{
 	fill:#fff;
 }
-ul.todo:not(#complete) li .buttons button.complete:hover svg{
+ul.todo:not(#completed) li .buttons button.complete:hover svg{
 	background-color:#25b99a;
 }
-ul.todo:not(#complete) li .buttons button.complete:hover svg .fill{
+ul.todo:not(#completed) li .buttons button.complete:hover svg .fill{
 	fill:#fff;
 }
-ul.todo:not(#complete) li .buttons button.remove:hover svg .fill{
+ul.todo li .buttons button.remove:hover svg .fill{
 	fill:#e85656;
 }
-ul.todo#complete:not(empty){
+ul.todo#completed:not(empty){
 	position: relative;
 	padding:60px 0 0  0;
 }
-ul.todo#complete:not(empty)::before{
+ul.todo#completed:not(empty)::before{
 	content:'';
 	height: 1px;
 	width:150px;
