@@ -15,34 +15,29 @@ document.getElementById("add").addEventListener('click',function(){
 	}
 });
 
-function removeItem(reitem){
-	var item=$(reitem).parent().parent()
+function removeItem(card){
+	var item=$(card).parent().parent()
 	$(item).remove()
 }
 
+function completeItem(card){
 
-function completeItem(compitem){
-	var value=$(compitem).parent().parent()
-	var item=value.parent()
-	if(item.attr("id")==='todo'){
-		console.log(value)
-		$('complete').append(value.html())
-		value.remove()
-	}
-	else{
-		$('.todo').append(value.html())
-		value.remove()
+	var item=$(card).parent().parent();
+	var parent=item.parent();
+	if(parent.attr('id')=='todo'){
+		console.log(parent.get[0].attr('li'))
+		$('completed').append(parent.attr('li'))
+		$(item).remove()
 	}
 }
+
 function addTodoItem(text){
 	var html=''
-
-
 	html='<li>'+ text+
 	'<div class="buttons">'+
 	'<button class="remove" onclick=removeItem(this)>'+removeSVG+'</button>'+'<button class="complete" onclick=completeItem(this)>'+completeSVG+'</button>'+
 	'</li>'
 
-	$('#todo').append(html)
+	document.getElementById('todo').innerHTML=html;
 
 }

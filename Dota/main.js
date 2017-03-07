@@ -81,7 +81,15 @@ $(function(){
 	};
 	$('.container').html(html);
 	var run=setInterval(function(){
+		if(runtimeout===30){
+			$("<audio></audio>").attr({
+				'src':'audio/Dien-may-xanh-Remix-Dien-may-xanh.mp3	',
+				'volume':0.6,
+				'autoplay':'autoplay'
+			}).appendTo(".time");
+		}
 		runtimeout--;
+
 		$('.time').html(runtimeout);
 		if(runtimeout==0){
 			clearInterval(run);

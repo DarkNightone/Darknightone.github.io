@@ -166,7 +166,7 @@ ul.todo:not(#complete) li .buttons button.complete:hover svg{
 ul.todo:not(#complete) li .buttons button.complete:hover svg .fill{
 	fill:#fff;
 }
-ul.todo:not(#complete) li .buttons button.remove:hover svg .fill{
+ul.todo li .buttons button.remove:hover svg .fill{
 	fill:#e85656;
 }
 ul.todo#complete:not(empty){
