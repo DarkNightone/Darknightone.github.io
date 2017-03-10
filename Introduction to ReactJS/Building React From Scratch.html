@@ -56,18 +56,19 @@
         if(e.target.innerText===''){
 
           e.target.innerText=currentTurn
+          
+          if(checkForWinner()){
+          alert('Player '+currentTurn+" Won!!")
+          winner=currentTurn
+        }
           currentTurn=currentTurn===PLAYER_One_SYMBOL ? PLAYER_Two_SYMBOL : PLAYER_One_SYMBOL
-          if(e.target.innerText=='X'){
+
+        }
+            if(e.target.innerText=='X'){
           e.target.style.color='red'
         }
         else{
           e.target.style.color='skyblue'
-        }
-                                if(checkForWinner()){
-          alert('Player '+currentTurn+" Won!!")
-          winner=currentTurn
-        }
-
         }
       }
     })
