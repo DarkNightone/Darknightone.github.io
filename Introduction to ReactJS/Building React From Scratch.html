@@ -62,12 +62,15 @@
           e.target.style.color='skyblue'
         }
         }
+        else{
+            currentTurn=currentTurn===PLAYER_One_SYMBOL ? PLAYER_Two_SYMBOL : PLAYER_One_SYMBOL
+
+        }
       }
               if(checkForWinner()){
           alert('Player '+currentTurn+" Won!!")
           winner=currentTurn
         }
-        currentTurn=currentTurn===PLAYER_One_SYMBOL ? PLAYER_Two_SYMBOL : PLAYER_One_SYMBOL
 
 
     })
