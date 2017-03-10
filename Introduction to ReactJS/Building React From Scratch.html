@@ -55,6 +55,7 @@
         if(e.target.innerText===''){
 
           e.target.innerText=currentTurn
+          currentTurn=currentTurn===PLAYER_One_SYMBOL ? PLAYER_Two_SYMBOL : PLAYER_One_SYMBOL
           if(e.target.innerText=='X'){
           e.target.style.color='red'
         }
@@ -68,7 +69,6 @@
           winner=currentTurn
         }
     })
-                currentTurn=currentTurn===PLAYER_One_SYMBOL ? PLAYER_Two_SYMBOL : PLAYER_One_SYMBOL
 
     function checkForWinner(){
       var squares=Array.prototype.slice.call(document.querySelectorAll('.square'),0);
