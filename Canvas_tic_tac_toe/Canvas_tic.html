@@ -51,35 +51,35 @@
     }
 
     function render(){
-      data.draw(_ctx)
+      data.draw(ctx)
 
     }
 
     function Tile(x,y){
       var x=x,y=y;
 
-      var tile = Tile.BLANK
+      var tile =Tile.BLANK
       if(tile===null){
-        var _c=document.createElement('canvas')
-        _c.height=_c.width=100;
 
-        _ctx=_c.getContext('2d')
+         var _c=document.createElement('canvas')
+         _c.height=_c.width=100
 
-        _ctx.fillStyle='skyblue'
+         _ctx=getContext('2d')
 
-        _ctx.fillRect(0,0,100,100)
+         _ctx.fillStyle='skyblue'
 
-        Tile.BLANK=new Image()
-        Tile.BLANK.src=_c.toDataURL();
-        tile=Tile.BLANK
+         _ctx.fillRect(0,0,100,100)
+
+         Tile.BLANK=new Image()
+         Tile.BLANK.src=_c.toDataURL()
+         tile=Tile.BLANK
       }
+      this.update=function(){
 
-       this.update=function(){
-
-       }
-       this.draw=function(_ctx){
-         _ctx.drawImage(tile,x,y)
-       }
+      }
+      this.draw=function(ctx){
+        ctx.drawImage(tile,x,y)
+      }
     }
     </script>
   </body>

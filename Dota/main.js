@@ -31,16 +31,14 @@ function shuffle(array){
 
 function flip(card){
 	$(card).toggleClass('flipped');
-	$(card).removeAttr("onclick");
 
 	if(!current){
 		current=$(card);
-
+		current.removeAttr("onclick");
 	}
 
+else{
 
-
-	else{
 	if(current.attr("dataname")!=$(card).attr("dataname")){
 		setTimeout(function(){
 			current.toggleClass("flipped");
@@ -58,7 +56,7 @@ function flip(card){
 			current.css('opacity','0');
 			current=null;
 			count++;
-			if(count==1)alert("You Are Win!!!");
+			if(count==7)alert("You Are Win!!!");
 		},500);
 
 	}
@@ -79,18 +77,19 @@ $(function(){
 
 		'</div></div>';
 	};
+
 	$('.container').html(html);
+
 	var run=setInterval(function(){
-		if(runtimeout===30){
+		runtimeout--;
+		$('.time').html(runtimeout);
+		if(runtimeout===29){
 			$("<audio></audio>").attr({
 				'src':'audio/Dien-may-xanh-Remix-Dien-may-xanh.mp3	',
 				'volume':0.6,
 				'autoplay':'autoplay'
-			}).appendTo(".time");
+			}).appendTo(".container");
 		}
-		runtimeout--;
-
-		$('.time').html(runtimeout);
 		if(runtimeout==0){
 			clearInterval(run);
 			alert("You Are Lose!!!");

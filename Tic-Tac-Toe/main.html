@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tic--Tac--Toe</title>
+  </head>
+
+    <style>
+@import url('https://fonts.googleapis.com/css?family=Diplomata+SC|Lato|Open+Sans|Oswald|Overpass+Mono|Raleway');
+
+      .Square{
+        height:80px;
+        width:80px;
+        font-size:40pt;
+        text-align: center;
+        font-family: 'Raleway', sans-serif;
+      }
+      h1{
+        border-bottom:1px solid #259aa9;
+        text-align: center;
+        font-family: 'Oswald', sans-serif;
+      }
+
+      body{
+        width:550px;
+        margin:auto;
+        background-color:#82C1D8;
+      }
+      #message{
+        font-size:10pt;
+        font-family: 'Diplomata SC', cursive;
+        text-align: center;
+        margin:5px;
+      }
+      #reset{
+        font-size:10pt;
+        font-family: 'Diplomata SC', cursive;
+        color:black;
+        margin-left: 144px;
+        text-decoration: none;
+      }
+      table{
+        margin: 5px 0 5px 0;
+        margin-left: 144px;
+      }
+    </style>
+  <body onload='gameStart()'>
+    <h1>Tic Tac Toe in JAVASCRIPT.</h1>
+      <div id='message'>Message here.</div>
+    <table border="1">
+        <tr>
+           <td class='Square' id='s1' draggable=""onclick='nextMove(this)'></td>
+           <td class='Square' id='s2' draggable=""onclick='nextMove(this)'></td>
+           <td class='Square' id='s3' draggable=""onclick='nextMove(this)'></td>
+        </tr>
+        <tr>
+           <td class='Square' id='s4' draggable=""onclick='nextMove(this)'></td>
+           <td class='Square' id='s5' draggable=""onclick='nextMove(this)'></td>
+           <td class='Square' id='s6' draggable=""onclick='nextMove(this)'></td>
+        </tr>
+        <tr>
+           <td class='Square' id='s7' draggable=""onclick='nextMove(this)'></td>
+           <td class='Square' id='s8' draggable=""onclick='nextMove(this)'></td>
+           <td class='Square' id='s9' draggable=""onclick='nextMove(this)'></td>
+        </tr>
+    </table>
+    <a href='javascript: gameStart()' id='reset'>Start Game</a>
+    <script src=main.js></script>
+  </body>
+</html>

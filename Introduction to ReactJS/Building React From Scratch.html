@@ -1,84 +1,109 @@
-<!DOCTYPE html>
-<html>
+  <!DOCTYPE html>
+  <html>
   <head>
-    <meta charset="utf-8">
-    <title>Building React From Scratch</title>
-    <style>
-      .broad{
-        display:flex;
-        width:600px;
-        height:600px;
-        flex-direction:row;
-        flex-wrap:wrap;
-        justify-content: flex-start;
-        padding: 20px;
-      }
-      .square{
-        width:200px;
-        height:200px;
-        box-sizing:border-box;
-        border:5px solid black;
-        font-size: 5em;
-        display:flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .square:hover{
-        background-color: #80cd92;
-        cursor: pointer;
-      }
-    </style>
+  <meta charset="utf-8">
+  <title>Building React From Scratch</title>
+  <style>
+  .broad{
+  display:flex;
+  width:600px;
+  height:600px;
+  flex-direction:row;
+  flex-wrap:wrap;
+  justify-content: flex-start;
+  margin: 20px;
+  }
+  .square{
+  width:200px;
+  height:200px;
+  box-sizing:border-box;
+  border:5px solid black;
+  font-size: 5em;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  }
+  .square:hover{
+    background-color: #cecd9a;
+    cursor: pointer;
+  }
+  </style>
   </head>
   <body>
-      <div class="broad">
-        <div class='square'data-square-id='0'></div>
-        <div class='square'data-square-id='1'></div>
-        <div class='square'data-square-id='2'></div>
-        <div class='square'data-square-id='3'></div>
-        <div class='square'data-square-id='4'></div>
-        <div class='square'data-square-id='5'></div>
-        <div class='square'data-square-id='6'></div>
-        <div class='square'data-square-id='7'></div>
-        <div class='square'data-square-id='8'></div>
-      </div>
-
-      <script>
-          var  PLAYER_One_SYMBOL='X',
-            PLAYER_Two_SYMBOL='O',
-            currentTurn=PLAYER_One_SYMBOL;
-          var broad=document.querySelector('.broad')
-
-          broad.addEventListener('click',function(e){
-
-            e.target.innerText=currentTurn
-
-            currentTurn=currentTurn===PLAYER_One_SYMBOL ? PLAYER_Two_SYMBOL : PLAYER_One_SYMBOL
-            if(checkForWinner()){
-              alert("You Won!!")
-            }
-          })
+  <div class="broad">
+  <div class='square'></div>
+  <div class='square'></div>
+  <div class='square'></div>
+  <div class='square'></div>
+  <div class='square'></div>
+  <div class='square'></div>
+  <div class='square'></div>
+  <div class='square'></div>
+  <div class='square'></div>
+  </div>
+  <script>
+    var  PLAYER_One_SYMBOL='X',
+      PLAYER_Two_SYMBOL='O',
+        winner=null,
+      currentTurn=PLAYER_One_SYMBOL;
+    var broad=document.querySelector('.broad')
 
 
-          function checkForWinner(){
-            var squares=Array.prototype.slice.call(document.querySelectorAll('.broad'));
+    broad.addEventListener('click',function(e){
+      if(winner==null){
+
+        if(e.target.innerText===''){
+
+          e.target.innerText=currentTurn
+        }
+        if(e.target.innerText=='X'){
+          e.target.style.color='red'
+        }
+        else{
+          e.target.style.color='skyblue'
+        }
+        if(checkForWinner()){
+          alert('Player '+currentTurn+" Won!!")
+          winner=currentTurn
+        }
+      }
+        currentTurn=currentTurn===PLAYER_One_SYMBOL ? PLAYER_Two_SYMBOL : PLAYER_One_SYMBOL
 
 
-            var symbols=squares.map(function(square){
-                    return square.innerHTML;
-            })
-            var winningCombos=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+    })
+    function checkForWinner(){
+      var squares=Array.prototype.slice.call(document.querySelectorAll('.square'),0);
 
-            return  winningCombos.find(function(combo){
-              if(symbols[combo[0]]==symbols[combo[1]]&&symbols[combo[1]]==symbols[combo[2]]){
-                return symbols[combo[0]];
-              }
-              else{
-                return false;
-              }
-            })
+    //  var squares=document.querySelectorAll('.square').innerText;
 
-            }
 
-      </script>
+  //  Select elements from an array:
+
+    // var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+
+    // var citrus = fruits.slice(1, 3);
+
+    // The result of citrus will be:
+    //
+    // Orange,Lemon
+
+
+      var symbols=squares.map(function(square){
+              return square.innerText;
+      })
+      var winningCombos=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+
+      return  winningCombos.find(function(combo){
+        if(symbols[combo[0]]==symbols[combo[1]]&&symbols[combo[1]]==symbols[combo[2]]){
+          return symbols[combo[0]];
+        }
+        else{
+          return false;
+        }
+      })
+
+      }
+
+  </script>
   </body>
-</html>
+  </html>
