@@ -1,7 +1,7 @@
 
 
+var cards=["0",'1','2','3','4','5'];
 
-var cards=["0",'1','2','3','4','5','6'];
 
 var current=null;
 
@@ -31,37 +31,45 @@ function shuffle(array){
 
 function flip(card){
 	$(card).toggleClass('flipped');
-
-	if(!current){
+	var list=[];
+	if(current===null){
 		current=$(card);
 		current.removeAttr("onclick");
+		list+=current
 	}
 
-else{
-
-	if(current.attr("dataname")!=$(card).attr("dataname")){
-		setTimeout(function(){
-			current.toggleClass("flipped");
-			$(card).toggleClass("flipped");
-			 current.attr('onclick','flip(this)');
-			 $(card).attr('onclick','flip(this)');
-			current=null;
-
-		},500);
-
-	}
 	else{
-		setTimeout(function(){
-			$(card).css('opacity','0');
-			current.css('opacity','0');
-			current=null;
-			count++;
-			if(count==7)alert("You Are Win!!!");
-		},500);
+		list+=$(card)
+		console.log(list)
+		for(var i=0;i<list.length;i++){
+
+		if(list[0].attr("dataname")!=list[1].attr("dataname")){
+
+			setTimeout(function(){
+
+				list[1].toggleClass("flipped");
+
+				list[0].toggleClass("flipped");
+
+				list[0].attr('onclick','flip(this)')
+
+			},500);
+		}
+
+		else{
+
+			setTimeout(function(){
+				count+=1;
+				list[1].css('opacity','0');
+				list[0].css('opacity','0');
+				list=[]
+				if(count===5)alert("You Are Win!!!");
+			},200);
+
+		}
 
 	}
-
-	}
+}
 }
 
 $(function(){
