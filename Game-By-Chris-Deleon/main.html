@@ -8,45 +8,45 @@
 </head>
 
 <body>
+  some text here
 
   <canvas id='gameCanvas' width='1000' height='500'></canvas>
-
   <script>
-    var canvas,canvasContext;
+  var canvas,canvasContext;
 
-    var ballX=50;
+  var ballX=50;
 
-    var ballSpeedX=7;
+  var ballSpeedX=10;
 
-    var ballY=30;
+  var ballY=50;
 
-    var ballSpeedY=3;
+  var ballSpeedY=4;
 
-    var Paddle1Y=250;
+  var Paddle1Y=250;
 
-    var Paddle2Y=250;
+  var Paddle2Y=250;
 
 
-    var PosStart=500;
+  var PosStart=500;
 
-    var Player_1_Score=0;
+  var Player_1_Score=0;
 
-    var Player_2_Score=0;
+  var Player_2_Score=0;
 
-    var WINNING_SCORE = 2;
+  var WINNING_SCORE = 2;
 
-    var ShowingWinScreen=false;
+  var ShowingWinScreen=false;
 
-    const PADDLE_HEIGHT=100;
-    const PADDLE_THICKNESS=10;
+  const PADDLE_HEIGHT=100;
+  const PADDLE_THICKNESS=10;
 
-    function CalculateMousePos(evt){
+  function CalculateMousePos(evt){
 
-      var rect=canvas.getBoundingClientRect();
+    var rect=canvas.getBoundingClientRect();
 
-      var root=document.documentElement;
+    var root=document.documentElement;
 
-      var mouseX=evt.clientX - rect.left - root.scrollLeft;
+    var mouseX=evt.clientX - rect.left - root.scrollLeft;
     //scrollLeft get the number of pixel the content of a element is crolled horizontally
     var mouseY=evt.clientY - rect.top - root.scrollTop;
     //scrollTop get the number of pixel the content of a element is crolled vertically
@@ -98,8 +98,8 @@
         Player_2_Score=0;
         ShowingWinScreen=false;
       }
-    }
   }
+}
   function computerPlayer(){
     var Paddle2YCenter=Paddle2Y+PADDLE_HEIGHT/2
 
@@ -146,9 +146,7 @@
       }
       else{
         Player_2_Score+=1;
-
         ballReset()
-        
 
 
       }
@@ -166,25 +164,25 @@
         ballSpeedY   = deltaY*0.35
 
       }
-      else{
-        Player_1_Score+=1;
-        ballReset()
+    else{
+      Player_1_Score+=1;
+      ballReset()
 
-      }
     }
+  }
     //ballSpeedX=-(ballSpeedX);
 
 
-    if(ballY>canvas.height){
+  if(ballY>canvas.height){
 
-      ballSpeedY=-ballSpeedY
-    }
-
-    if(ballY<0) {
-      ballSpeedY=-ballSpeedY
-    }
+    ballSpeedY=-ballSpeedY
   }
-  function drawEverything(){
+
+  if(ballY<0) {
+    ballSpeedY=-ballSpeedY
+  }
+}
+function drawEverything(){
   //next line blanks out the screen   with black
   colorRect(0,0,canvas.width,canvas.height,'black')
 
@@ -195,6 +193,7 @@
     if(Player_2_Score >= WINNING_SCORE){
 
       canvasContext.fillText('Right to Won!',400,400)
+      canvasContext.fillText(Player_2_Score,420,420)
       canvasContext.fillText("Click to continue",400,450)
     }
 
@@ -204,6 +203,7 @@
 
       canvasContext.fillText('Left to Won!',400,400)
 
+      canvasContext.fillText(Player_1_Score,420,420)
 
       canvasContext.fillText("Click to continue",400,450)
 

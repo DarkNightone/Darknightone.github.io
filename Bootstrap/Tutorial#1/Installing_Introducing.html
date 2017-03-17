@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Installing Bootstrap&Introducing the Grid system</title>
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <style>
+    .grey{
+      background-color:#000;
+      padding:20px;
+    }
+  </style>
+
+  </head>
+  <body>
+
+    <header>
+      <div class='jumbotron'>
+          <div class='container'>
+              <h1>Hello World </h1>
+              <h3>Rows In Grid System</h3>
+          </div>
+      </div>
+    </header>
+
+    <div class='container'>
+        <div class='row'><div class='well'>This is the first row</div></div>
+        <div class='row'><div class='well'>This is the second row</div></div>
+        <div class='row'><div class='well'>This is the third row</div></div>
+    </div>
+    <div class='grey'>
+      <div class='container'>
+        <div class='well'>This is my first container</div>
+      </div>
+    </div>
+
+    <div class='container'>
+      <div class='row'>
+        <div class="col-lg-6">
+          <div class="well">
+            This is my Column
+          </div>
+          <div class="well">
+            This is my Column
+          </div>
+          <div class="well">
+            This is my Column
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <div class="well">
+            Column-3
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='container'>
+      <div class="row">
+        <div class="col-xs-4">
+          <div class="well">
+            First Column
+          </div>
+      </div>
+      <div class="col-xs-4 col-lg-offset-4">
+        <div class="well">
+          Second Column
+        </div>
+      </div>
+    </div>
+  </div>
+    <script src='https://code.jquery.com/jquery-3.1.1.slim.min.js'></script>
+    <!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+</html>
