@@ -86,6 +86,15 @@
       $(function(){
         $('#panel-1').hide(1000).delay(1000).show(1000);
         $('#panel-2').slideUp(1000).slideDown(1000)
+        $('#panel-3').toggle(1000).toggle(1000)
+       // $('#panel-4').fadeOut(1000).fadeIn(1000)
+        //The fadeOut() method gradually changes the opacity, for selected elements, from visible to hidden (fading effect).
+
+        $('#panel-4').css({
+        	color:'red',
+        	'font-weight':'bold'
+        })
+
       });
     </script>
   </body>
