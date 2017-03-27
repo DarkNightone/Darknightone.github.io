@@ -12,9 +12,13 @@
     body{
       padding-top:60px;
     }
+  .carousel-inner .item img{
+      width:1280px;
+      height: 600px;
+    }
   </style>
 </head>
-<body>
+<body data-spy='scroll' data-target='#my-navbar'>
 
   <!-- Navbar -->
 
@@ -86,7 +90,6 @@
       </section>
 
   </div>
-
   <!-- call to action -->
   <section>
     <div class="well">
@@ -101,11 +104,276 @@
             <input type="text"class='form-control' name="" value="" id='email'placeholder="Enter Your Mail">
             <button type="submit" class='btn btn-info' name="button">Subscribe</button>
           </div>
-
+          <hr>
         </form>
       </div>
     </div>
   </section>
+
+  <!-- Gallary -->
+
+  <div class="container">
+    <section>
+      <div class="page-header" id='gallery'>
+        <h2>Gallary <small>Check out the Awesome Gallery</small></h2>
+      </div>
+      <div class="carousel slide" id='screenshot-carousel' data-ride='carousel'>
+        <ol class="carousel-indicators">
+          <li data-target='#screenshot-carousel' data-slide-to='0' class="active"></li>
+          <li data-target='#screenshot-carousel' data-slide-to='1'></li>
+          <li data-target='#screenshot-carousel' data-slide-to='2'></li>
+          <li data-target='#screenshot-carousel' data-slide-to='3'></li>
+        </ol>
+        <div class="carousel-inner">
+
+          <div class="item active">
+            <img src="phong_canh85.jpg" alt="">
+            <div class="carousel-caption">
+                <h3>Phong Canh</h3>
+                <p>This is  the caption</p>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="13117hinh-anh-phong-canh-bo-bien-nhin-tu-tren-cao.jpg" alt="">
+
+            <div class="carousel-caption">
+                <h3>Phong Canh</h3>
+                <p>This is  the caption</p>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="663325.jpg" alt="">
+            <div class="carousel-caption">
+                <h3>Phong Canh</h3>
+                <p>This is  the caption</p>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="15-10bo-anh-phong-canh-dep-muon-ngam-mai2.jpg" alt="">
+            <div class="carousel-caption">
+                <h3>Phong Canh</h3>
+                <p>This is  the caption</p>
+            </div>
+          </div>
+        </div>
+        <a href="#screenshot-carousel" class="left carousel-control"data-slide='prev'>
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a href="#screenshot-carousel" class="right carousel-control"data-slide='next'>
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <!-- Feature -->
+  <div class="container">
+    <section>
+      <div class="page-header" id='features'>
+        <h2>Features. <small>Some of the coolest feature of this app.</small></h2>
+      </div>
+      <div class="row">
+        <div class="col-sm-8">
+          <h3>This is the heading </h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut aliquet ultricies dui commodo placerat. Praesent quis arcu mauris. Donec sapien turpis, tempor eu nisl nec, gravida vehicula nisl. Duis sed lacus id nibh volutpat pretium sed id nunc. Donec vitae scelerisque ligula, malesuada dictum metus.</p>
+        </div>
+        <div class="col-lg-4">
+          <img src="download.jpeg" class="img-responsive" alt="">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-8">
+          <h3>This is the heading </h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut aliquet ultricies dui commodo placerat. Praesent quis arcu mauris. Donec sapien turpis, tempor eu nisl nec, gravida vehicula nisl. Duis sed lacus id nibh volutpat pretium sed id nunc. Donec vitae scelerisque ligula, malesuada dictum metus.</p>
+        </div>
+        <div class="col-lg-4">
+          <img src="636089581451035575_iphone-7-1-cell.jpg" class="img-responsive" alt="">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-8">
+          <h3>This is the heading </h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut aliquet ultricies dui commodo placerat. Praesent quis arcu mauris. Donec sapien turpis, tempor eu nisl nec, gravida vehicula nisl. Duis sed lacus id nibh volutpat pretium sed id nunc. Donec vitae scelerisque ligula, malesuada dictum metus.</p>
+        </div>
+        <div class="col-lg-4">
+          <img src="download (1).jpeg" class="img-responsive" alt="">
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="panel panel-default text-center">
+            <div class="panel-body">
+              <span class="glyphicon glyphicon-ok"></span>
+              <h4>This is the heading</h4>
+              <p>penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean placerat ex tincidunt pulvinar venenatis. Sed luctus neque at tempor faucibus. Quisque venenatis metus eget ante euismod fringilla. Aliquam quis purus ac arcu ullamcorper fringilla vel eget nunc. Quisque quis viverra augue, et vestibulum justo.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="panel panel-default text-center">
+            <div class="panel-body">
+              <span class="glyphicon glyphicon-star"></span>
+
+              <h4>This is the heading</h4>
+              <p>penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean placerat ex tincidunt pulvinar venenatis. Sed luctus neque at tempor faucibus. Quisque venenatis metus eget ante euismod fringilla. Aliquam quis purus ac arcu ullamcorper fringilla vel eget nunc. Quisque quis viverra augue, et vestibulum justo.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="panel panel-default text-center">
+            <div class="panel-body">
+              <span class="glyphicon glyphicon-play-circle"></span>
+
+              <h4>This is the heading</h4>
+              <p>penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean placerat ex tincidunt pulvinar venenatis. Sed luctus neque at tempor faucibus. Quisque venenatis metus eget ante euismod fringilla. Aliquam quis purus ac arcu ullamcorper fringilla vel eget nunc. Quisque quis viverra augue, et vestibulum justo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- Faq -->
+  <div class="container">
+    <section>
+      <div class="page-header" id='faq'>
+        <h2>FAQ.<small>Engaging with consumers.</small></h2>
+      </div>
+      <div class="panel-group" id='accordian'>
+        <div class=" panel panel-info">
+          <div class="panel-heading">
+            <div class="panel-title">
+              <a href="#collapse-1" data-toggle='collapse' data-parent='#accordian'>
+              Question one ?
+            </a>
+            </div>
+            <div  id='collapse-1' class="panel-collapse collapse in">
+                <div class="panel-body">
+                  Nam at suscipit neque, in fermentum ipsum. Nulla luctus vestibulum odio, in viverra mi ornare ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam porta, ipsum non dapibus molestie, est diam blandit nibh, in suscipit augue magna sed orci. Sed dictum mauris tincidunt, molestie tellus imperdiet, lacinia dui.
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class=" panel panel-default">
+          <div class="panel-heading">
+            <div class="panel-title">
+              <a href="#collapse-2" data-toggle='collapse' data-parent='#accordian'>
+              Question two ?
+            </a>
+            </div>
+            <div  id='collapse-2' class="panel-collapse collapse ">
+                <div class="panel-body">
+                  Nam at suscipit neque, in fermentum ipsum. Nulla luctus vestibulum odio, in viverra mi ornare ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam porta, ipsum non dapibus molestie, est diam blandit nibh, in suscipit augue magna sed orci. Sed dictum mauris tincidunt, molestie tellus imperdiet, lacinia dui.
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class=" panel panel-default">
+          <div class="panel-heading">
+            <div class="panel-title">
+              <a href="#collapse-3" data-toggle='collapse' data-parent='#accordian'>
+              Question three ?
+            </a>
+            </div>
+            <div  id='collapse-3' class="panel-collapse collapse ">
+                <div class="panel-body">
+                  Nam at suscipit neque, in fermentum ipsum. Nulla luctus vestibulum odio, in viverra mi ornare ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam porta, ipsum non dapibus molestie, est diam blandit nibh, in suscipit augue magna sed orci. Sed dictum mauris tincidunt, molestie tellus imperdiet, lacinia dui.
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="container">
+    <section>
+      <div class="page-heading" id='contact'>
+        <h2>Contact Us<small>Contact Us for more</small></h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-4">
+          <p>Send us a message,or contact us from the address below</p>
+          <address class="">
+            <strong>Darknightone</strong><br>
+            HaNoi,Vietnamese.<br>
+            Please <br>
+          </address>
+        </div>
+        <div class="col-lg-8">
+            <form class="form-horizontal" action="" method="post">
+              <div class="form-group">
+                <label for="user-name" class="col-lg-2 control-label">
+                  Name
+                </label>
+                <div class="col-lg-10">
+                  <input type="text" name="" id='user-name' class='form-control' placeholder="Enter your name"value="">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email-name" class="col-lg-2 control-label">
+                  Email
+                </label>
+                <div class="col-lg-10">
+                  <input type="text" name="" id='email-name' class='form-control' placeholder="Enter your email"value="">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="user-url" class="col-lg-2 control-label">
+                  Your website
+                </label>
+                <div class="col-lg-10">
+                  <input type="text" name="" id='user-url' class='form-control' placeholder="Enter your URL"value="">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="user-message" class="col-lg-2 control-label">
+                Any  Message
+                </label>
+                <div class="col-lg-10">
+                  <textarea name="user-message" id='user-message' class="form-control"rows="20" cols="10" placeholder="Enter your message"></textarea>
+                  </div>
+              </div>
+              <div class="form-group">
+                <div class="col-lg-10 col-lg-offset-2">
+                  <button type="submit" class="btn btn-primary"name="button">Submit</button>
+                </div>
+              </div>
+            </form>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- Footer -->
+
+  <footer>
+    <hr>
+    <div class="container text-center">
+      <h3>Subscribe for more free stuff</h3>
+      <p>Enter your name and email</p>
+      <form class="form-inline" action="index.html" method="post">
+        <div class="form-group">
+          <label for="subscription">Subcribe</label>
+          <input type="text"class='form-control' name="" value="" id='subscription'placeholder="Your Name">
+          <label for="email">Email address</label>
+          <input type="text"class='form-control' name="" value="" id='email'placeholder="Enter Your Mail">
+          <button type="submit" class='btn btn-info' name="button">Subscribe</button>
+        </div>
+      </form>
+      <hr>
+      <ul class="list-inline">
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Google</a></li>
+      </ul>
+      <p>&copy;Copyright @ 2017</p>
+    </div>
+  </footer>
   <script src="https://code.jquery.com/jquery-3.2.0.min.js" charset="utf-8"></script>
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

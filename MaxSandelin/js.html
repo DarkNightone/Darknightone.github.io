@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Leaning Functions & Variables</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+      var myFirstVariable='Hello,world!'
+      console.log(myFirstVariable);
+
+      myFirstVariable='Goodbye, world!'
+
+      console.log(myFirstVariable);
+      var x=15,y=2;
+       var z=parseInt(x +''+  y) // The parseInt() function parses a string and returns an integer
+      console.log(z);
+      function myFirstFunction(item,callback){
+          item++;
+          callback(item)
+      }
+      myFirstFunction(9,function(item){
+        console.log(item);
+      })
+    </script>
+  </body>
+</html>
