@@ -13,11 +13,9 @@
     <div class="container">
       <div class="jumbotron">
         <h1>Let's do Jquery</h1>
-        <ul class="btn-group">
-          <li class="btn btn-default"><a href="#">#btn1</a></li>
-        </ul>
-        <button type="button"id='btn2' name="button">#btn2</button>
-        <button type="button"id='btn3' name="button">#btn3</button>
+        <button type="button" class='panel-btn' data-panelId='#panel-1'name="button">#btn1</button>
+        <button type="button"class='panel-btn' data-panelId='#panel-2'name="button">#btn2</button>
+        <button type="button"class='panel-btn' data-panelId='#panel-3'name="button">#btn3</button>
       </div>
       <div class="row">
         <div class="col-xs-3">
@@ -84,17 +82,26 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script type="text/javascript">
       $(function(){
-        $('#panel-1').hide(1000).delay(1000).show(1000);
-        $('#panel-2').slideUp(1000).slideDown(1000)
-        $('#panel-3').toggle(1000).toggle(1000)
-       // $('#panel-4').fadeOut(1000).fadeIn(1000)
-        //The fadeOut() method gradually changes the opacity, for selected elements, from visible to hidden (fading effect).
-
-        $('#panel-4').css({
-        	color:'red',
-        	'font-weight':'bold'
+      //   $('#panel-1').hide(1000).delay(1000).show(1000);
+      //   $('#panel-2').slideUp(1000).slideDown(1000)
+      //   $('#panel-3').toggle(1000).toggle(1000)
+      //  // $('#panel-4').fadeOut(1000).fadeIn(1000)
+      //   //The fadeOut() method gradually changes the opacity, for selected elements, from visible to hidden (fading effect).
+       //
+      //   $('#panel-4').css({
+      //   	color:'red',
+      //   	'font-weight':'bold'
+      //   })
+        // $('.panel-btn').on('mouseover',function(){
+        //   var content='Some new content'
+        //   var panelId=$(this).attr('data-panelId')
+        //   $(panelId).toggle(1000)
+        //   $(panelId+' .panel-body').html(content)
+        // })
+        $('.panel-btn').on('mouseover ',function(){
+          var panelId=$(this).attr('data-panelId')
+          $(panelId).toggle(1000)
         })
-
       });
     </script>
   </body>
